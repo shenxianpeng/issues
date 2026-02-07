@@ -1,0 +1,90 @@
+name: 🌙 Little Moon Issue
+description: Report an issue or request a feature for Little Moon app
+title: "[Little Moon] "
+labels: ["little-moon"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report an issue or request a feature for **Little Moon**!
+        
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issue Type
+      description: What type of issue are you reporting?
+      options:
+        - Bug Report
+        - Feature Request
+        - Question
+        - Other
+    validations:
+      required: true
+      
+  - type: input
+    id: app-version
+    attributes:
+      label: App Version
+      description: Which version of Little Moon are you using?
+      placeholder: e.g., 1.0.0
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Which platform are you using?
+      options:
+        - iOS
+        - iPadOS
+        - macOS
+        - Other
+    validations:
+      required: false
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please provide a detailed description of your issue or feature request
+      placeholder: Tell us what you see or what you'd like to see
+    validations:
+      required: true
+      
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce (for bugs)
+      description: If this is a bug report, please provide steps to reproduce the issue
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: false
+      
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: false
+      
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: false
+      
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or information about the issue here
+    validations:
+      required: false
